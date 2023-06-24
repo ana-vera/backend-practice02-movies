@@ -13,7 +13,7 @@ const app = express()
 app.use(errorHandler)
 app.use(express.json())
 app.use('/api/users', userRoutes)
-app.use('api/movies', movieRoutes)
+app.use('/api/movies', movieRoutes)
 
 app.listen(port, ()=> console.log(`Server started on port ${port}`.cyan.underline) )
 
