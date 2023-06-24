@@ -3,7 +3,8 @@ import mongoose from 'mongoose'
 const userSchema = mongoose.Schema({
     name: {
         type: String,
-        required: [true, 'Please type in your name']
+        required: [true, 'Please type in your name'],
+        unique:true
     },
     email: {
         type: String,
@@ -19,4 +20,4 @@ const userSchema = mongoose.Schema({
     timestamps: true
 })
 
-export default mongoose.model('Usuario', userSchema)
+export default mongoose.model('User', userSchema)
