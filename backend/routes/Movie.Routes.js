@@ -6,6 +6,6 @@ import {setMovie} from '../controllers/Movie.Controllers.js'
 const router = express.Router()
 
 router.post('/',setMovie)
-router.post('/', protect, setFavMovie)
+router.post('/setFavMovie', protect, setFavMovie)
 
 export default router 

@@ -6,7 +6,7 @@ const favMovieSchema = mongoose.Schema({
         required: true,
         ref: 'User'
     },
-    movie: {
+    movieId: {
         type: mongoose.Schema.Types.ObjectId,
         required: true,
         ref: 'Movie'

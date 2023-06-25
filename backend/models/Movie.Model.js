@@ -13,10 +13,6 @@ const movieSchema = mongoose.Schema({
         type: [Number],
         required: [true, 'At least 1 Genre ID needed --> []'],
     },
-    id:{
-        type: Number,
-        required: [true, 'Enter id from example database']
-    },
     original_language: {
         type: String,
         required: [true, 'Type the language of the movie']

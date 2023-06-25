@@ -1,11 +1,11 @@
 import asyncHandler from "express-async-handler"
-import FavMovieModel from "../models/FavMovie.Model.js"
+import FavMovie from "../models/FavMovie.Model.js"
 
 const setFavMovie = asyncHandler( async (req,res)=>{
 
-    const favMovie = await FavMovieModel.create({
-        user: req.body.user.id,
-        movie: req.body.movie.id
+    const favMovie = await FavMovie.create({
+        user: req.user.id,
+        movieId: req.body.movieId
     })
 
     res.status(200).json({favMovie})
