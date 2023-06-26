@@ -7,6 +7,7 @@ const setMovie = asyncHandler( async (req,res)=>{
         adult: req.body.adult,
         backdrop_path: req.body.release_date,
         genre_ids: req.body.genre_ids,
+        id: req.body.id,
         original_language: req.body.original_language,
         original_title: req.body.original_title,
         overview: req.body.overview,
