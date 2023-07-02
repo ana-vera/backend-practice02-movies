@@ -12,7 +12,7 @@ connectDB()
 const port = process.env.PORT
 const app = express()
 
-app.use(cors)
+app.use(cors())
 app.use(errorHandler)
 app.use(express.json())
 app.use('/api/users', userRoutes)
