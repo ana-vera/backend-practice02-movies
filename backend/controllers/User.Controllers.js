@@ -50,7 +50,7 @@ const loginUser = asyncHandler ( async (req,res) => {
 
     const user = await User.findOne({email})
 
-    console.log(`${user}`.bgCyan)
+    console.log(`${req.body}`.bgCyan)
     console.log(`${req.body}`.bgMagenta)
 
     if(user && (await bcrypt.compare(password, user.password))) {
