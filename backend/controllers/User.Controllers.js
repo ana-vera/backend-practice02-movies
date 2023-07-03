@@ -1,4 +1,5 @@
 import asyncHandler from "express-async-handler"
+import colors from 'colors'
 
 import User from '../models/User.Model.js'
 import bcrypt from 'bcryptjs'
@@ -48,6 +49,9 @@ const loginUser = asyncHandler ( async (req,res) => {
     const {email, password} = req.body
 
     const user = await User.findOne({email})
+
+    console.log(`${user}`.bgCyan)
+    console.log(`${req.body}`.bgMagenta)
 
     if(user && (await bcrypt.compare(password, user.password))) {
         res.status(200).json({
